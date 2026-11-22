@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a2a6b"/>
+      <stop offset="1" stop-color="#020b24"/>
+    </linearGradient>
+    <linearGradient id="hex" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7df3ff"/>
+      <stop offset="0.5" stop-color="#1e90ff"/>
+      <stop offset="1" stop-color="#0b3fd1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#1e90ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1e90ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- macOS-style rounded square -->
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#glow)"/>
+  <rect x="112" y="112" width="800" height="800" rx="175" fill="none" stroke="#3aa0ff" stroke-opacity="0.45" stroke-width="6"/>
+
+  <!-- circuit traces -->
+  <g stroke="#1e90ff" stroke-opacity="0.55" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 330 H300 L350 380"/>
+    <path d="M200 700 H290 L340 650"/>
+    <path d="M824 330 H724 L674 380"/>
+    <path d="M824 700 H734 L684 650"/>
+  </g>
+  <g fill="#7df3ff">
+    <circle cx="200" cy="330" r="13"/><circle cx="200" cy="700" r="13"/>
+    <circle cx="824" cy="330" r="13"/><circle cx="824" cy="700" r="13"/>
+  </g>
+
+  <!-- hexagon: glow pass then crisp pass -->
+  <polygon points="512,200 782,356 782,668 512,824 242,668 242,356" fill="none" stroke="#1e90ff" stroke-width="40" stroke-linejoin="round" filter="url(#blur)"/>
+  <polygon points="512,200 782,356 782,668 512,824 242,668 242,356" fill="#06173f" fill-opacity="0.85" stroke="url(#hex)" stroke-width="30" stroke-linejoin="round"/>
+
+  <!-- speech bubble with tail -->
+  <path d="M352 392 H672 a34 34 0 0 1 34 34 V552 a34 34 0 0 1 -34 34 H560 L470 664 V586 H352 a34 34 0 0 1 -34 -34 V426 a34 34 0 0 1 34 -34 Z" fill="url(#hex)"/>
+
+  <!-- leet "#" with a cursor, cut out of the bubble -->
+  <g stroke="#04153d" stroke-width="26" stroke-linecap="round" fill="none">
+    <path d="M440 436 L418 544"/>
+    <path d="M508 436 L486 544"/>
+    <path d="M406 472 H524"/>
+    <path d="M400 512 H518"/>
+  </g>
+  <rect x="566" y="440" width="26" height="104" rx="6" fill="#04153d"/>
+  <rect x="610" y="516" width="52" height="28" rx="6" fill="#04153d"/>
+</svg>

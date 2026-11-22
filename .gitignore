@@ -1,0 +1,36 @@
+# Autotools files
+Makefile
+Makefile.in
+*.lo
+*.la
+*.o
+.deps
+.libs
+.dirstamp
+/aclocal.m4
+/autom4te.cache
+/build-aux
+/config.h
+/config.h.in
+/config.h.in~
+/config.log
+/config.status
+/configure
+/configure~
+/libtool
+/m4
+/stamp-h1
+/vibechat
+/hexchat
+fishlim_tests
+*.log
+*.trs
+*.gmo
+*~
+vibe-hexchat/vibechat/hexchat/data/man/hexchat.1
+vibe-hexchat/vibechat/hexchat/data/misc/io.github.Hexchat.desktop
+vibe-hexchat/vibechat/hexchat/data/pkgconfig/hexchat-plugin.pc
+
+# Xcode user state
+*.xcuserstate
+xcuserdata/
